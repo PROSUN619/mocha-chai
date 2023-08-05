@@ -1,0 +1,49 @@
+create a node project
+----------------------
+npm init -y
+
+by default test case path is test folder
+if we want to change the folder then we have to define in the package.json file
+in the test section
+
+
+use sinon package to spy, stub and mock
+
+
+how to run individual file
+
+1) 
+"scripts": {
+    "test-single" : "mocha"
+},
+
+2) 
+npm run test-single ./test-case/spy.spec.js
+
+
+stub vs spy
+
+stub is to call explicitly a function if we are unsure about the return value
+
+spy is check whether the function is called with particular arguments or not
+
+
+what is the difference between mock spy and stub
+
+
+to generate report use mochaawesome
+
+mochaawesome command
+
+"test": "mocha tests 'test-case/*.spec.js' --reporter mochawesome --require mochawesome/register"
+
+
+use nyc to generate the coverage
+
+
+
+playlist link
+https://www.youtube.com/playlist?list=PLolI8AY2AS9bGs9pxrdRD13M2P6FOdswd
+
+
+

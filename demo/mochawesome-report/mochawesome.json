@@ -1,0 +1,504 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 11,
+    "passes": 11,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-05T11:56:27.530Z",
+    "end": "2023-08-05T11:56:30.155Z",
+    "duration": 2625,
+    "testsRegistered": 11,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a84c6903-5048-47d5-9fde-985ff0a8e156",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ba9e7df7-321a-452e-b11e-2d6c357981fc",
+          "title": "Task API",
+          "fullFile": "D:\\Demo Projects\\Node Unit Testing\\demo\\test-case\\api.spec.js",
+          "file": "\\test-case\\api.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "get user",
+              "fullTitle": "Task API get user",
+              "timedOut": false,
+              "duration": 28,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(server).get('/api/user/detail')\n.end((err, res) => {\n    expect(res.status).to.be.equal(200);\n    expect(res.body).to.have.all.keys('ID','DOB','city','marks','name');\n    done();\n})",
+              "err": {},
+              "uuid": "0f030c22-0417-4235-8dbf-f9ad93602928",
+              "parentUUID": "ba9e7df7-321a-452e-b11e-2d6c357981fc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0f030c22-0417-4235-8dbf-f9ad93602928"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "54b64bc1-1833-44a9-a372-6f5ec08b3cb2",
+          "title": "Aspect check",
+          "fullFile": "D:\\Demo Projects\\Node Unit Testing\\demo\\test-case\\chai.spec.js",
+          "file": "\\test-case\\chai.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check string",
+              "fullTitle": "Aspect check check string",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "assert.typeOf(userName,'string');",
+              "err": {},
+              "uuid": "cef38924-8e90-4d42-bd80-7af0720a2033",
+              "parentUUID": "54b64bc1-1833-44a9-a372-6f5ec08b3cb2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cef38924-8e90-4d42-bd80-7af0720a2033"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "8d7a62a1-4c84-4e6a-a8cf-6c7ad46fd57d",
+          "title": "heading1",
+          "fullFile": "D:\\Demo Projects\\Node Unit Testing\\demo\\test-case\\hook.spec.js",
+          "file": "\\test-case\\hook.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"heading1\"",
+              "fullTitle": "heading1 \"before all\" hook in \"heading1\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('---------Before all test cases---------');",
+              "err": {},
+              "uuid": "ca50abbf-d249-4101-9349-1173421d203b",
+              "parentUUID": "8d7a62a1-4c84-4e6a-a8cf-6c7ad46fd57d",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook in \"heading1\"",
+              "fullTitle": "heading1 \"before each\" hook in \"heading1\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('---------before each test cases---------');",
+              "err": {},
+              "uuid": "fcb0f7e9-9fa2-4bb0-9eac-9e893cccb869",
+              "parentUUID": "8d7a62a1-4c84-4e6a-a8cf-6c7ad46fd57d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"heading1\"",
+              "fullTitle": "heading1 \"after all\" hook in \"heading1\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('---------After all test cases---------');",
+              "err": {},
+              "uuid": "3c2b205d-4a74-4e89-bbd7-af98b28df207",
+              "parentUUID": "8d7a62a1-4c84-4e6a-a8cf-6c7ad46fd57d",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"heading1\"",
+              "fullTitle": "heading1 \"after each\" hook in \"heading1\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('---------after each test cases---------');",
+              "err": {},
+              "uuid": "cae86477-d681-442a-8e4b-d65e58f057ec",
+              "parentUUID": "8d7a62a1-4c84-4e6a-a8cf-6c7ad46fd57d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "check string 1 ",
+              "fullTitle": "heading1 check string 1 ",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(data).to.be.a('string')",
+              "err": {},
+              "uuid": "bf04b3ce-99fe-4bc1-9b14-08812c8ff4d0",
+              "parentUUID": "8d7a62a1-4c84-4e6a-a8cf-6c7ad46fd57d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check string 2 ",
+              "fullTitle": "heading1 check string 2 ",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(data).to.be.a('string')",
+              "err": {},
+              "uuid": "170e38b7-34eb-49da-ac83-cec8d3ecea8a",
+              "parentUUID": "8d7a62a1-4c84-4e6a-a8cf-6c7ad46fd57d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check string 3 ",
+              "fullTitle": "heading1 check string 3 ",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(data).to.be.a('string')",
+              "err": {},
+              "uuid": "3470aec8-6234-42bd-b477-e7951c3162c9",
+              "parentUUID": "8d7a62a1-4c84-4e6a-a8cf-6c7ad46fd57d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bf04b3ce-99fe-4bc1-9b14-08812c8ff4d0",
+            "170e38b7-34eb-49da-ac83-cec8d3ecea8a",
+            "3470aec8-6234-42bd-b477-e7951c3162c9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d396943f-bc85-4122-8d5d-d05bbc8e4d43",
+          "title": "---------mock---------",
+          "fullFile": "D:\\Demo Projects\\Node Unit Testing\\demo\\test-case\\mock.spec.js",
+          "file": "\\test-case\\mock.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "function call check",
+              "fullTitle": "---------mock--------- function call check",
+              "timedOut": false,
+              "duration": 3,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var mock = sinon.mock(studentobj);\n\nvar expect = mock.expects('getExternal');    \nexpect.exactly(1);\nexpect.withArgs(40);\nstudentobj.finalMarks(40);",
+              "err": {},
+              "uuid": "31371ad8-17d4-4290-bb68-908e1814e889",
+              "parentUUID": "d396943f-bc85-4122-8d5d-d05bbc8e4d43",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "31371ad8-17d4-4290-bb68-908e1814e889"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "7b11a1f1-db8c-444c-ae3b-19512526306f",
+          "title": "---------nock---------",
+          "fullFile": "D:\\Demo Projects\\Node Unit Testing\\demo\\test-case\\nock.spec.js",
+          "file": "\\test-case\\nock.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "API call check",
+              "fullTitle": "---------nock--------- API call check",
+              "timedOut": false,
+              "duration": 59,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var obj = {status: 'ok', statusCode: 200, data : []};\n\n\nconst apiHit = nock('http://localhost:5000/api/v1')\n.get('/posts')\n.reply(200,obj);\n/*Note :  above line of code is a replica of exact api calling. \ncomment/uncomment and run to see the result difference in console\n*/\nstudentobj.thirdPartyAPI()\n.then(res => {\n    //console.log('res.length',res.length);\n    expect(res.length).to.be.eql(obj);\n    done();\n})\n.catch(err => {\n    new Error('error ' + err);\n    done();\n})",
+              "err": {},
+              "uuid": "db736b25-a4ed-4bf0-b112-e60d4957769c",
+              "parentUUID": "7b11a1f1-db8c-444c-ae3b-19512526306f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db736b25-a4ed-4bf0-b112-e60d4957769c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 59,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e1d5b211-e7b5-4757-a2f0-28adc71c7551",
+          "title": "---------promise---------",
+          "fullFile": "D:\\Demo Projects\\Node Unit Testing\\demo\\test-case\\promise.spec.js",
+          "file": "\\test-case\\promise.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should resolve promise within 5000ms",
+              "fullTitle": "---------promise--------- should resolve promise within 5000ms",
+              "timedOut": false,
+              "duration": 2503,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assuming your promise takes more than 2 seconds to resolve\nthis.timeout(5000); // Set the timeout to 5000ms\nreturn expect(studentobj.dbCall()).to.eventually.equal(10);",
+              "err": {},
+              "uuid": "31374b01-ac92-4102-8fff-457e01205055",
+              "parentUUID": "e1d5b211-e7b5-4757-a2f0-28adc71c7551",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "31374b01-ac92-4102-8fff-457e01205055"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2503,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "20507721-502b-4562-a044-dc073b0f5681",
+          "title": "---------spy---------",
+          "fullFile": "D:\\Demo Projects\\Node Unit Testing\\demo\\test-case\\spy.spec.js",
+          "file": "\\test-case\\spy.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test user function",
+              "fullTitle": "---------spy--------- test user function",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(studentobj.userID()).to.be.equal(12);",
+              "err": {},
+              "uuid": "0251ce63-6e50-49c7-b0f4-3f263369fbac",
+              "parentUUID": "20507721-502b-4562-a044-dc073b0f5681",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "function argument check",
+              "fullTitle": "---------spy--------- function argument check",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var spyObj = sinon.spy(studentobj,'getinfo');\nstudentobj.home(5);\nexpect(spyObj.calledWith(5,1)).to.be.true;",
+              "err": {},
+              "uuid": "382aad9b-4755-4617-81ac-3c19804a0a53",
+              "parentUUID": "20507721-502b-4562-a044-dc073b0f5681",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0251ce63-6e50-49c7-b0f4-3f263369fbac",
+            "382aad9b-4755-4617-81ac-3c19804a0a53"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "17a13add-6d57-4104-b9d7-f1d33c150dee",
+          "title": "---------stub---------",
+          "fullFile": "D:\\Demo Projects\\Node Unit Testing\\demo\\test-case\\stub.spec.js",
+          "file": "\\test-case\\stub.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "function argument check",
+              "fullTitle": "---------stub--------- function argument check",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var stubObj = sinon.stub(studentobj,'getExternal');\n\nstubObj.withArgs(40).returns(5);\nexpect(studentobj.finalMarks(40)).to.be.equals(54);",
+              "err": {},
+              "uuid": "77a9242e-2916-4c03-a43e-ec5c665334fc",
+              "parentUUID": "17a13add-6d57-4104-b9d7-f1d33c150dee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "77a9242e-2916-4c03-a43e-ec5c665334fc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
